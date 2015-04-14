@@ -13,10 +13,14 @@
 	<context:component-scan base-package="net.slipp.web" />
 
     <mvc:annotation-driven />
+    
+    <mvc:resources location="/stylesheets/" mapping="/stylesheets/**" />
+    
+    <mvc:resources location="/javascripts/" mapping="/javascripts/**" />
 
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 	        <!-- Example: a logical view name of 'showMessage' is mapped to '/WEB-INF/jsp/showMessage.jsp' -->
-	        <property name="prefix" value="/WEB-INF/view/"/>
+	        <property name="prefix" value="/WEB-INF/jsp/"/>
 	        <property name="suffix" value=".jsp"/>
 	</bean>
 	
